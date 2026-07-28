@@ -11,3 +11,5 @@ First, **Dynamic Patient–Doctor Co-Evolutionary Learning** pairs a Dynamic Pat
 Second, **Cross-Task Policy Graph Consolidation and Unified Model Learning** prunes low-value nodes, aggregates high-value nodes across tasks while filtering redundancy, and distills a unified policy planner with task-specific decision models for globally coherent decision-making.
 
 Experiments on MedChain and ClinicalBench show that CoE-Agent surpasses state-of-the-art baselines by **11.13%** and **23.63%** in average score, while achieving up to **19.5× faster inference**. Source code is to be released.
+
+![Framework](Figure1.png)
