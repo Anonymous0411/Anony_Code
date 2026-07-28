@@ -1,0 +1,30 @@
+{
+  "created_at_utc": "2026-07-24T17:05:06.643233+00:00",
+  "source": "/data1/huangguolin/workplace2/graph_agent/graph_agent_v5/inference_process_data/task1_level1/policy/train_data/result.json",
+  "source_sha256": "4c2df8e1da35297364e49c4d8736187fcf91a8a56fc61e06fd98495cf05cab02",
+  "source_split": "train",
+  "entry_count": 200,
+  "question_type_counts": {
+    "allergy": 22,
+    "associated_symptoms": 22,
+    "confirmation": 22,
+    "demographics": 13,
+    "examination": 20,
+    "family_personal_history": 19,
+    "medication_treatment": 17,
+    "other": 17,
+    "past_history": 16,
+    "symptom_character": 16,
+    "symptom_onset_course": 16
+  },
+  "response_mode_counts": {
+    "grounded": 106,
+    "unknown": 94
+  },
+  "embedding_model": "text-embedding-3-large",
+  "embedding_dimension": 3072,
+  "minimum_grounding": 0.25,
+  "semantic_dedup_threshold": 0.96,
+  "quality_method": "deterministic_record_and_style_rules_v1",
+  "frozen_at_test_time": true
+}
