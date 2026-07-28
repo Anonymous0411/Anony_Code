@@ -1,0 +1,8 @@
+**既往史**
+{history}
+
+**医学检查**
+{medical_check}
+
+**影像检查**
+{image_report}

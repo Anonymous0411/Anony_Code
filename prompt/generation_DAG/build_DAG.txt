@@ -1,0 +1,80 @@
+## 任务
+- 你需要从一份{task_type}任务计划中，把这个文本计划描述转化为图模型。
+- 计划中的每个步骤、患者询问、额外工具需求都可以作为图的节点，并且理清节点与节点之间的依赖。
+- 对于所需要转化图模型的节点而言，节点类型分为两种： search 与 solve ，search 表示该节点的任务描述属于信息检索类子任务，solve 表示该节点的任务描述为推理任务。
+- 只需要输出“输出示例”中展示的结构化内容，无需输出其余内容或解释
+
+## {task_type}任务计划
+{plan}
+
+## 输出示例
+{
+  "nodes": [
+    {
+      "node_id": "n1",
+      "task_type": "search",
+      "task_desc": "录入患者初始信息（主诉+年龄+性别+基础病史）并标准化",
+      "question": "您能描述一下吞食的金属块的具体形状和大小吗？是否有尖锐的边缘？",
+      "tools": "......"
+    },
+    {
+      "node_id": "n2",
+      "task_type": "search",
+      "task_desc": "从标准化信息中提取核心症状及属性（时长、诱因）",
+      "question": "......",
+      "tools": "......"
+    },
+    {
+      "node_id": "n3",
+      "task_type": "solve",
+      "task_desc": "基于核心症状判断风险等级（高危/中危/低危）",
+      "question": "......",
+      "tools": "......"
+    },
+    {
+      "node_id": "n4",
+      "task_type": "solve",
+      "task_desc": "基于核心症状+风险等级匹配一级科室",
+      "question": "......",
+      "tools": "......"
+    },
+    {
+      "node_id": "n5",
+      "task_type": "solve",
+      "task_desc": "基于一级科室+具体症状细分二级科室",
+      "question": "......",
+      "tools": "......"
+    },
+    {
+      "node_id": "n6",
+      "task_type": "solve",
+      "task_desc": "校验症状与科室匹配冲突、多症状优先级冲突",
+      "question": "......",
+      "tools": "......"
+    },
+    {
+      "node_id": "n7",
+      "task_type": "solve",
+      "task_desc": "响应实时反馈（如补充症状）调整科室匹配",
+      "question": "......",
+      "tools": "......"
+    },
+    {
+      "node_id": "n8",
+      "task_type": "solve",
+      "task_desc": "整合所有节点结果，输出最终分诊方案",
+      "question": "......",
+      "tools": "......"
+    }
+  ],
+  "edges": [
+    {"from_node": "n1", "to_node": "n2"},
+    {"from_node": "n2", "to_node": "n3"},
+    {"from_node": "n2", "to_node": "n4"},
+    {"from_node": "n3", "to_node": "n4"},
+    {"from_node": "n4", "to_node": "n5"},
+    {"from_node": "n5", "to_node": "n6"},
+    {"from_node": "n6", "to_node": "n7"},
+    {"from_node": "n7", "to_node": "n8"}
+  ]
+}

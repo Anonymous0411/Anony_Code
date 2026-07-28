@@ -1,0 +1,23 @@
+## 任务
+- 当前你需要结合目前已知的信息，完成输入问题。
+- 你的输出内容，要严格回答输入问题，无需做出过多的解释和其余内容。
+
+## 已知信息
+**病人主诉**
+{patient_des}
+
+**医患交流记录**
+{history_dialogue}
+补充：
+{dialogue_record}
+
+**一些诊断**
+{history_diagnosis}
+
+{diagnosis}
+
+**工具调用结果**
+{tools_result}
+
+## 输入问题
+{question}
