@@ -1,8 +1,0 @@
-**病人主诉**
-{patient_des}
-
-**医患交流记录**
-{dialogue_record}
-
-**一些诊断**
-{diagnosis}
