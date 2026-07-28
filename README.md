@@ -12,4 +12,7 @@ Second, **Cross-Task Policy Graph Consolidation and Unified Model Learning** pru
 
 Experiments on MedChain and ClinicalBench show that CoE-Agent surpasses state-of-the-art baselines by **11.13%** and **23.63%** in average score, while achieving up to **19.5× faster inference**. Source code is to be released.
 
-![Framework](Figure1.png)
+
+<p align="center">
+  <img src="Figure1.png" alt="CoE-Agent Framework" width="800">
+</p>
